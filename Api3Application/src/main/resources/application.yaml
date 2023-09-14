@@ -1,0 +1,19 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: api3
+
+json-placeholder-api:
+  base-url: https://jsonplaceholder.typicode.com
+  todos-uri: todos
+  users-uri: users
+  posts-uri: posts
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true

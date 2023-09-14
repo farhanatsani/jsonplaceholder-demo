@@ -1,0 +1,33 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: api1
+  redis:
+    host: localhost
+    port: 6379
+    password: password
+
+json-placeholder-api:
+  base-url: https://jsonplaceholder.typicode.com
+  todos-uri: todos
+  users-uri: users
+  posts-uri: posts
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+
+#feign:
+#  client:
+#    config:
+#      api2:
+#        connectTimeout: 10000
+#        readTimeout: 20000
+#      api3:
+#        connectTimeout: 10000
+#        readTimeout: 20000

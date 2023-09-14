@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway-ds
+  cloud:
+    gateway:
+      routes:
+        - id: api1
+          uri: lb://API1
+          predicates:
+            - Path=/api/todos/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
