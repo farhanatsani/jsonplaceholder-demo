@@ -4,12 +4,14 @@ import com.streamworx.post.Post;
 import com.streamworx.todo.Todo;
 import com.streamworx.user.Address;
 import com.streamworx.user.Company;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
 
-@Getter @Setter
+@Getter @Setter @AllArgsConstructor @NoArgsConstructor
 public class CompletedTodo {
     private long id;
     private String name;
